@@ -1,0 +1,28 @@
+# pVaults - Player Vaults Configuration
+# Support: 1.21.1 - 1.21.11 (Paper & Folia)
+# Use MiniMessage for colors: https://webui.advntr.dev/
+
+messages:
+  # The prefix shown before plugin messages
+  prefix: "<gray>[<gradient:#ffcc00:#ffaa00>Vault</gradient>]</gray> "
+
+  # Sent when a player reloads the plugin
+  reload: "<green>Configuration and vaults have been reloaded successfully!</green>"
+
+  # Sent when a player tries to open a page they don't have permissions for
+  no-permission: "<red>You do not have permission to access this vault page.</red>"
+
+vault:
+  # The default number of pages a player gets without extra permissions
+  # Players can get more (up to 50) with 'playervaults.pages.X'
+  default-max-pages: 2
+
+  # The title shown at the top of the Vault GUI
+  # Placeholders: %player_name%, %page%, %max_pages%
+  page-title: "<gold>%player_name%'s Vault</gold> <gray>(%page%/%max_pages%)</gray>"
+
+# Optimization Settings
+# These settings are handled automatically by the code for Folia/Paper
+performance:
+  async-save: true
+  use-native-serialization: true

@@ -1,0 +1,27 @@
+name: pVaults
+version: 1.0
+main: org.eyman_.pVaults.PVaults
+api-version: '1.21'
+author: eyman_
+description: Secure personal storage with multi-page support and OP-only inspection.
+
+commands:
+  vault:
+    description: Open your personal vault or view another player's vault.
+    usage: /vault [page] or /vault view <player> [page]
+    permission: playervaults.use
+  playervaults:
+    description: Main admin command for pVaults.
+    usage: /playervaults reload
+    permission: playervaults.admin
+
+permissions:
+  playervaults.use:
+    description: Allows players to open and use their own personal vaults.
+    default: true
+  playervaults.admin:
+    description: Allows viewing/editing other players' vaults and reloading. Restricted to OPs by default.
+    default: op
+  playervaults.pages.*:
+    description: Grant access to specific vault pages (e.g., playervaults.pages.5).
+    default: false
