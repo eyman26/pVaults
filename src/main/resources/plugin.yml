@@ -4,6 +4,7 @@ main: org.eyman_.pVaults.PVaults
 api-version: '1.21'
 author: eyman_
 description: Secure personal storage with multi-page support and OP-only inspection.
+folia-supported: true
 
 commands:
   vault:
