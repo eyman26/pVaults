@@ -21,6 +21,12 @@ vault:
   # Placeholders: %player_name%, %page%, %max_pages%
   page-title: "<gold>%player_name%'s Vault</gold> <gray>(%page%/%max_pages%)</gray>"
 
+  # Anti-dupe safety net: how often (in ticks, 20 = 1 second) an open vault session is
+  # re-synced in the background, on top of the normal click/drag syncing. You shouldn't need
+  # to touch this, it exists purely as defense-in-depth against unforeseen ways an inventory
+  # could change without firing a normal click/drag event.
+  reconcile-interval-ticks: 20
+
 # Optimization Settings
 # These settings are handled automatically by the code for Folia/Paper
 performance:
