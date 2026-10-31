@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "pvaults",
+  "version": "${version}",
+  "name": "pVaults",
+  "description": "Secure multi-page personal vaults with admin inspection.",
+  "authors": ["eyman_"],
+  "license": "GPL-3.0-only",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["org.eyman_.pVaults.fabric.PVaultsMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.0",
+    "fabric-api": "*",
+    "minecraft": "${minecraft}",
+    "java": ">=${java}"
+  }
+}

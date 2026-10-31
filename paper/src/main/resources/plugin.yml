@@ -1,5 +1,5 @@
 name: pVaults
-version: 1.0.5
+version: '${version}'
 main: org.eyman_.pVaults.PVaults
 api-version: '1.21'
 author: eyman_
@@ -13,7 +13,7 @@ commands:
     permission: playervaults.use
   playervaults:
     description: Main admin command for pVaults.
-    usage: /playervaults reload
+    usage: /<command> reload
     permission: playervaults.admin
 
 permissions:

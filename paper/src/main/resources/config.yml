@@ -1,5 +1,5 @@
 # pVaults - Player Vaults Configuration
-# Support: 1.21.1 - 1.21.11 (Paper & Folia)
+# Supports Paper 1.21.1 - 26.3 and Folia 1.21.4 - 26.3
 # Use MiniMessage for colors: https://webui.advntr.dev/
 
 messages:
@@ -10,7 +10,18 @@ messages:
   reload: "<green>Configuration and vaults have been reloaded successfully!</green>"
 
   # Sent when a player tries to open a page they don't have permissions for
-  no-permission: "<red>You do not have permission to access this vault page.</red>"
+  no-permission: "<red>You do not have permission to do that.</red>"
+
+  players-only: "<red>Only players can use vaults.</red>"
+
+  # <max> = the highest page the viewer can open
+  invalid-page: "<red>Invalid page. Pages available: 1-<max>.</red>"
+
+  # A vault page can only be open in one place at a time (this is what keeps Folia dupe-free)
+  page-in-use: "<red>That vault page is already open somewhere else.</red>"
+
+  # <name> = the name that was typed
+  unknown-player: "<red>No player named <name> has played on this server.</red>"
 
 vault:
   # The default number of pages a player gets without extra permissions
@@ -26,9 +37,3 @@ vault:
   # to touch this, it exists purely as defense-in-depth against unforeseen ways an inventory
   # could change without firing a normal click/drag event.
   reconcile-interval-ticks: 20
-
-# Optimization Settings
-# These settings are handled automatically by the code for Folia/Paper
-performance:
-  async-save: true
-  use-native-serialization: true
